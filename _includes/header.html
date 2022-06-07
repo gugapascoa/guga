@@ -1,0 +1,33 @@
+<header class="header">
+    <nav class="main-nav">
+        <a class="avatar" href="{{site.baseurl}}/">
+            <figure>
+                <img src="{{ "{{site.baseurl}}/assets/images/avatar.png" | relative_url }}" alt="Guga avatar">
+            </figure>
+        </a>
+        <div id="hamburger-icon">
+            <div class="line-1"></div>
+            <div class="line-2"></div>
+        </div>
+        <div class="menu-lists">
+            <ul class="main-menu">
+            {% for item in site.data.menu %}
+                <li>
+                    <a class="navoption" href="{{item.link}}">{{item.title}}</a>
+                </li>
+            {% endfor %}
+            </ul>
+            <ul class="social-menu">
+            {% for item in site.data.social %}
+                <li>
+                    <a class="social" href="{{item.link}}" target="_blank">
+                        <figure>
+                            <img src="{{ "{{site.baseurl}}/assets/images/icons/social/{{item.title}}.png" | relative_url }}" alt="{{item.title}} logo">
+                        </figure>
+                    </a>
+                </li>
+            {% endfor %}
+            </ul>
+        </div>
+    </nav>
+</header>

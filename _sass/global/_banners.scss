@@ -1,0 +1,35 @@
+.home-hero {
+    background-color: $light-blue;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    align-items: center;
+    @media (min-width: $screen-md) {
+        flex-direction: row;
+    }
+    
+    .text {
+        padding: $padding-mobile;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        span {
+            color: $blue;
+        }
+        p {
+            color: $dark-grey;
+        }
+        form {
+            position: relative;
+        }
+        input {
+            width: 100%;
+        }
+        button {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}

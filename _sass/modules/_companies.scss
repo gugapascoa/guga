@@ -1,0 +1,29 @@
+.companies {
+    background-color: $dark-grey;
+    display: grid;
+    text-align: center;
+    gap: rem(16px);
+    padding: $padding-mobile;
+
+    @media (min-width: $screen-sm) {
+        grid-template-columns: 1fr 2fr;
+        align-items: center;
+        justify-content: space-between;
+        text-align: left;
+
+    }
+    h2 {
+        color: $white;
+    }
+    .companies-list {
+        display: flex;
+        align-items: center;
+        gap: rem(16px);
+
+        figure {
+            @media (min-width: $screen-sm) {
+                padding: rem(16px);
+            }
+        }
+    }
+}

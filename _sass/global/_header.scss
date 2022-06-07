@@ -1,0 +1,92 @@
+header {
+    position: fixed;
+    background-color: $white;
+    width: 100%;
+    padding: $margin-mobile;
+    top: 0;
+    z-index: 100;
+    @media (min-width: $screen-md) {
+        padding: 0;
+    }
+}
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.avatar {
+    padding: rem(16px);
+    img {
+        width: rem(48px);
+    }
+}
+.menu-lists {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: calc(100vh - 80px);
+    width: 100%;
+    margin-top: 80px;
+    background-color: $white;
+    transition: 0.4s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: rem(16px);
+
+    &.show {
+        pointer-events: all;
+        left: 0;
+    }
+    @media (min-width: $screen-md) {
+        position: inherit;
+        pointer-events: all;
+        height: unset;
+        margin-top: 0;
+        flex-direction: row;
+        align-items: center;
+    }
+}
+.main-menu,
+.social-menu {
+    display: flex;
+    gap: rem(32px);
+}
+.main-menu {
+    flex-direction: column;
+    @media (min-width: $screen-md) {
+        flex-direction: row;
+    }
+}
+.social-menu {
+    padding: rem(16px) 0 rem(16px) rem(16px);
+}
+.navoption {
+    font-size: rem(40px);
+    font-weight: 500;
+    padding: rem(8px) rem(16px);
+    transition: 0.2s ease;
+
+    &:hover {
+        color: $blue;
+        transition: 0.2s ease;
+    }
+    @media (min-width: $screen-md) {
+        font-size: rem(24px);
+    }
+}
+.social {
+    img {
+        max-width: rem(24px);
+    }
+}
+
+
+
+.page-content {
+    margin-top: rem(80px);
+    @media (min-width: $screen-md) {
+        margin-top: rem(88px);
+    }
+}

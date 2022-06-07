@@ -1,0 +1,42 @@
+// Hamburger //
+#hamburger-icon {
+    display: flex;
+    flex-direction: column;
+    gap: rem(6px);
+    cursor: pointer;
+    width: fit-content;
+    padding: rem(15px) rem(8px);
+    .line-1,
+    .line-2 {
+        background-color: $black;
+        width: rem(32px);
+        height: rem(6px);
+        transition: .2s ease;
+    }
+    .line-1.on {
+        transform: rotate(45deg) translate(4px, 4px);
+        transition: 0.2s ease;
+    }
+    .line-2.on {
+        transform: rotate(-45deg) translate(4px, -4px);
+        transition: 0.2s ease;
+    }
+
+    @media (min-width: $screen-md) {
+        display: none;
+    }
+}
+
+button {
+    height: rem(56px);
+    padding: 0 rem(16px);
+    border-radius: rem(32px);
+}
+.primary-button {
+    background-color: $blue;
+    color: $white;
+}
+.secondary-button {
+    color: $blue;
+    border: 2px solid $blue;
+}

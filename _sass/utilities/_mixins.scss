@@ -1,0 +1,28 @@
+$html-font-size: 16px;
+@function stripUnit($value) {
+	@return $value / ($value * 0 + 1);
+}
+@function rem($pxValue) {
+	@return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+@mixin title-hero-mobile {
+    font-size: rem(48px);
+    font-weight: 700;
+    line-height: rem(56px);
+}
+@mixin title-hero-desktop {
+    font-size: rem(72px);
+    font-weight: 700;
+    line-height: rem(80px);
+}
+@mixin body-hero-mobile {
+    font-size: rem(16px);
+    font-weight: 400;
+    line-height: rem(24px);
+}
+@mixin body-hero-desktop {
+    font-size: rem(20px);
+    font-weight: 400;
+    line-height: rem(28px);
+}

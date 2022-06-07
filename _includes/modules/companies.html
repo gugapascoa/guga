@@ -1,0 +1,12 @@
+<section class="companies">
+    <h2>Companies I've worked for:</h2>
+    <ul class="companies-list">
+    {% for item in site.data.companies %}
+        <li>
+          <figure>
+              <img src="{{ "{{site.baseurl}}/assets/images/companies/{{item.title}}-logo.png" | relative_url }}" alt="{{item.title}} logo" title="{{item.title}}">
+          </figure>
+        </li>
+    {% endfor %}
+    </ul>
+</section>

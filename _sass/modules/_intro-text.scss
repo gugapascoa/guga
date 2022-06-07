@@ -1,0 +1,22 @@
+.intro-text {
+    background-color: $dark-grey;
+    color: $white;
+    padding: $padding-mobile;
+    padding-top: rem(64px);
+    padding-bottom: rem(96px);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: rem(16px);
+    .intro-title,
+    .intro-paragraphs {
+        max-width: rem(640px);
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+    }
+    .subtitle {
+        color: $yellow;
+    }
+}

@@ -4,3 +4,10 @@
 h1 {
     font-size: rem(48px);
 }
+h2 {
+    font-size: rem(24px);
+    font-weight: 600;
+    @media (min-width: $screen-sm) {
+        font-size: rem(48px);
+    }
+}

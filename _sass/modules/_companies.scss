@@ -10,10 +10,20 @@
         align-items: center;
         justify-content: space-between;
         text-align: left;
-
+    }
+    @media (min-width: $screen-lg) {
+        grid-template-columns: 1fr 1fr;
     }
     h2 {
         color: $white;
+        font-size: rem(16px);
+        font-weight: 500;
+        @media (min-width: $screen-sm) {
+            font-size: rem(16px);
+        }
+        @media (min-width: $screen-md) {
+            font-size: rem(20px);
+        }
     }
     .companies-list {
         display: flex;

@@ -1,0 +1,17 @@
+<section class="services">
+  <div class="services-text">
+    <p class="subtitle">Services</p>
+    <h2>What I create with clients</h2>
+    <p>Throughout the years, I've worked in many different fields within design and developed skills that range from branding all the way to building digital products.</p>
+  </div>
+  <ul class="cards-list">
+    {% for item in site.data.services %}
+    <li class="card card-{{ forloop.index }}">
+      <figure>
+        <img src="{{ "{{site.baseurl}}/assets/images/icons/emojis/{{item.icon}}-icon.png" | relative_url }}" alt="{{item.icon}} icon">
+      </figure>
+      <h3>{{item.title}}</h3>
+      <p>{{item.text}}</p>
+    </li>
+    {% endfor %}
+</section>

@@ -59,3 +59,8 @@ sass:
   style: compressed
 
 collections_dir: collections
+
+collections:
+  case-studies:
+    output: true
+    permalink: /case-studies/:path/

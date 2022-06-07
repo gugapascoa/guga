@@ -1,0 +1,60 @@
+.services {
+    margin: rem(96px) 0;
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+    padding: $padding-mobile;
+
+    @media (min-width: $screen-md) {
+        flex-direction: row;
+        gap: rem(96px);
+    }
+    .services-text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8px);
+
+        .subtitle {
+            color: $blue;
+            font-weight: 600;
+        }
+        p {
+            color: $dark-grey;
+        }
+    }
+
+    .cards-list {
+        display: grid;
+        gap: rem(24px);
+        @media (min-width: $screen-sm) {
+            grid-template-columns: 1fr 1fr;
+        }
+        .card {
+            padding: $padding-mobile;
+            border-radius: rem(8px);
+            display: flex;
+            flex-direction: column;
+            gap: rem(8px);
+
+            figure {
+                max-width: rem(40px);
+            }
+            h3 {
+                font-weight: 600;
+                font-size: rem(24px);
+            }
+            p {
+                color: $dark-grey;
+            }
+            &-1 {
+                background-color: $light-blue;
+            }
+            &-2 {
+                background-color: $light-yellow;
+            }
+            &-3 {
+                background-color: $light-green;
+            }
+        }
+    }
+}

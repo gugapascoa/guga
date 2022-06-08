@@ -1,0 +1,36 @@
+footer {
+    background-color: $dark-grey;
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+    padding: $padding-mobile;
+    color: $white;
+    text-align: center;
+    @media (min-width: $screen-sm) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        gap: rem(8px);
+        .footer-option {
+            font-size: rem(20px);
+            &:hover {
+                text-decoration: underline;
+
+            }
+        }
+        @media (min-width: $screen-sm) {
+            flex-direction: row;
+            gap: rem(32px);
+        }
+    }
+
+    .footer-social-menu {
+        display: flex;
+        gap: rem(16px);
+        justify-content: center;
+    }
+}

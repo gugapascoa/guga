@@ -1,0 +1,20 @@
+<footer>
+  <ul class="footer-menu">
+    {% for item in site.data.menu %}
+        <li>
+            <a class="footer-option" href="{{item.link}}">{{item.title}}</a>
+        </li>
+    {% endfor %}
+  </ul>
+  <ul class="footer-social-menu">
+    {% for item in site.data.social %}
+        <li>
+            <a class="social" href="{{item.link}}" target="_blank">
+                <figure>
+                    <img src="{{ "{{site.baseurl}}/assets/images/icons/social/{{item.title}}-white.png" | relative_url }}" alt="{{item.title}} logo">
+                </figure>
+            </a>
+        </li>
+    {% endfor %}
+    </ul>
+  </footer>

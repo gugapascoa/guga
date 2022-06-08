@@ -5,6 +5,7 @@ header {
     padding: $margin-mobile;
     top: 0;
     z-index: 100;
+    box-shadow: 0 1px 15px 0 rgba($black, .05);
     @media (min-width: $screen-md) {
         padding: 0;
     }

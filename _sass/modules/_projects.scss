@@ -1,0 +1,75 @@
+.case-studies {
+    background-color: $light-grey;
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+    .case-studies-title {
+        text-align: center;
+        padding: rem(48px) rem(16px);
+        span {
+            color: $blue;
+        }
+    }
+    .projects-list {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32px);
+
+        @media (min-width: $screen-sm) {
+            li:nth-child(odd) {
+                figure {
+                    order: 0;
+                }
+            }
+            li:nth-child(even) {
+                figure {
+                    order: 1;
+                }
+            }
+        }
+    }
+    .project {
+        background-color: $white;
+        margin: $margin-mobile;
+        padding: $padding-mobile;
+        border-radius: rem(8px);
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+
+        @media (min-width: $screen-sm) {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: $padding-desktop;
+        }
+        @media (min-width: $screen-lg) {
+            gap: rem(96px);
+            margin: $margin-desktop;
+        }
+
+        .project-text {
+            display: flex;
+            flex-direction: column;
+            gap: rem(16px);
+            h3 {
+                font-size: rem(24px);
+                font-weight: 500;
+                @media (min-width: $screen-sm) {
+                    font-size: rem(32px);
+                    margin-top: rem(24px);
+                }
+                @media (min-width: $screen-lg) {
+                    font-size: rem(40px);
+                }
+            }
+            p {
+                color: $dark-grey;
+            }
+        }
+    }
+    a {
+        margin: 0 auto rem(96px);
+        color: $blue;
+        text-decoration: underline;
+    }
+}

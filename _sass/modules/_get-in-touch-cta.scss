@@ -1,0 +1,26 @@
+.get-in-touch {
+    display: flex;
+    flex-direction: column;
+    gap: rem(32px);
+    place-items: center;
+    text-align: center;
+    background-color: $dark-grey;
+    padding: rem(96px) rem(16px);
+    .get-in-touch-text {
+        display: flex;
+        justify-content: center;
+        color: $white;
+        img {
+            max-height: rem(32px);
+            @media (min-width: $screen-sm) {
+                max-height: rem(64px);
+            }
+        }
+    }
+    a {
+        width: fit-content;
+        button {
+            cursor: pointer;
+        }
+    }
+}

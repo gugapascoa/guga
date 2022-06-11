@@ -13,7 +13,7 @@
             <ul class="main-menu">
             {% for item in site.data.menu %}
                 <li>
-                    <a class="navoption" href="{{item.link}}">{{item.title}}</a>
+                    <a class="navoption {% if page.url == item.link %}active-menu-item{% endif %}" href="{{site.baseurl}}{{item.link}}">{{item.title}}</a>
                 </li>
             {% endfor %}
             </ul>

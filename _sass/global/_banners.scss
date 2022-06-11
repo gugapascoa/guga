@@ -33,3 +33,32 @@
         }
     }
 }
+.contact-hero {
+    display: flex;
+    flex-direction: column;
+    gap: rem(64px);
+    place-items: center;
+    text-align: center;
+    background-color: $light-blue;
+    padding: $padding-mobile;
+    padding-top: rem(64px);
+    padding-bottom: rem(64px);
+    .get-in-touch-text {
+        display: flex;
+        flex-direction: column;
+        gap: rem(32px);
+        max-width: rem(640px);
+        h1 {
+            span {
+                color: $blue;
+            }
+        }
+        figure {
+            display: inline-block;
+            vertical-align: middle;
+            img {
+                max-height: rem(64px);
+            }
+        }
+    }
+}

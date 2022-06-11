@@ -2,7 +2,7 @@
   <ul class="footer-menu">
     {% for item in site.data.menu %}
         <li>
-            <a class="footer-option" href="{{item.link}}">{{item.title}}</a>
+            <a class="footer-option {% if page.url == item.link %}active-footer-item{% endif %}" href="{{item.link}}">{{item.title}}</a>
         </li>
     {% endfor %}
   </ul>

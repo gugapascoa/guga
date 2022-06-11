@@ -33,17 +33,30 @@ button {
     border-radius: rem(32px);
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 .primary-button {
     background-color: $blue;
     color: $white;
     padding: 0 rem(32px);
+    transition: 0.3s ease;
+    &:hover {
+        background-color: $dark-blue;
+        color: $light-grey;
+        transition: 0.3s ease;
+    }
 }
 .secondary-button {
     color: $blue;
     border: 2px solid $blue;
     width: fit-content;
     padding: 0 rem(32px);
+    transition: 0.3s ease;
+    &:hover {
+        background-color: $blue;
+        color: $white;
+        transition: 0.3s ease;
+    }
 }
 .icon-button {
     gap: rem(8px);

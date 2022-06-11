@@ -4,6 +4,7 @@
         Check out my projects bellow</h2>
     </div>
     <ul class="projects-list">
+    {% if page.class ==  "home" %}
     {% for project in site.case-studies | limit: 2 %}
       <li class="project project-{{ forloop.index }}">
         <figure>
@@ -12,10 +13,30 @@
         <div class="project-text">
           <h3>{{project.title}}</h3>
           <p>{{project.description}}</p>
-          <button class="secondary-button" type="button" name="button">Learn more</button>
+          <a href="{{site.baseurl}}/case-studies/{{project.slug}}">
+            <button class="secondary-button" type="button" name="button">Learn more</button>
+          </a>
         </div>
       </li>
     {% endfor %}
     </ul>
-    <a href="/case-studies/">View more</a>
+    <a href="/case-studies/" class="view-more">View more</a>
+    {% endif %}
+    {% if page.class ==  "case-studies" %}
+    {% for project in site.case-studies %}
+      <li class="project project-{{ forloop.index }}">
+        <figure>
+          <img src="{{ "{{site.baseurl}}/assets/images/projects/{{project.thumbnail}}.png" | relative_url }}" alt="{{project.thumbnail-alt}}" title="{{project.title}}">
+        </figure>
+        <div class="project-text">
+          <h3>{{project.title}}</h3>
+          <p>{{project.description}}</p>
+          <a href="{{site.baseurl}}/case-studies/{{project.slug}}">
+            <button class="secondary-button" type="button" name="button">Learn more</button>
+          </a>
+        </div>
+      </li>
+    {% endfor %}
+    </ul>
+    {% endif %}
 </section>

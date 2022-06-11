@@ -1,9 +1,9 @@
 .services {
-    margin: rem(96px) 0;
+    padding: rem(96px) rem(16px);
     display: flex;
     flex-direction: column;
     gap: rem(32px);
-    padding: $padding-mobile;
+    background-color: $white;
 
     @media (min-width: $screen-md) {
         flex-direction: row;

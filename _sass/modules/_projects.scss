@@ -3,6 +3,7 @@
     display: flex;
     flex-direction: column;
     gap: rem(32px);
+    margin: 0 auto rem(96px);
     .case-studies-title {
         text-align: center;
         padding: rem(48px) rem(16px);
@@ -67,9 +68,9 @@
             }
         }
     }
-    a {
-        margin: 0 auto rem(96px);
+    .view-more {
         color: $blue;
         text-decoration: underline;
+        place-self: center;
     }
 }

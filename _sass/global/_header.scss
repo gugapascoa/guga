@@ -83,11 +83,6 @@ header {
     }
 }
 
-
-
-.page-content {
-    margin-top: rem(80px);
-    @media (min-width: $screen-md) {
-        margin-top: rem(88px);
-    }
+.active-menu-item {
+    color: $blue !important;
 }

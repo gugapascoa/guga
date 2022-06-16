@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang | default: "en-US" }}">
+{% include head.html %}
+
+<body>
+    <style type="text/css" media="screen">
+        .error-content {
+            height: 100vh;
+            width: 100vw;
+            position: relative;
+        }
+      </style>
+    <main class="{{page.class}}-content">
+        {{ content }}
+    </main>
+</body>
+
+</html>

@@ -1,4 +1,5 @@
-.home-hero {
+.home-hero,
+.about-hero {
     background-color: $light-blue;
     display: flex;
     flex-direction: column;
@@ -18,6 +19,7 @@
         }
         p {
             color: $dark-grey;
+            margin-bottom: rem(32px);
         }
         form {
             position: relative;
@@ -30,6 +32,14 @@
             right: 0;
             top: 50%;
             transform: translateY(-50%);
+        }
+    }
+    .text-about {
+        button {
+            position: relative;
+            left: 0;
+            top: 0;
+            transform: translateY(0%);
         }
     }
 }
@@ -48,17 +58,5 @@
         flex-direction: column;
         gap: rem(32px);
         max-width: rem(640px);
-        h1 {
-            span {
-                color: $blue;
-            }
-        }
-        figure {
-            display: inline-block;
-            vertical-align: middle;
-            img {
-                max-height: rem(64px);
-            }
-        }
     }
 }

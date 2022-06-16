@@ -3,6 +3,16 @@
 }
 h1 {
     font-size: rem(48px);
+    span {
+        color: $blue;
+    }
+    figure {
+        display: inline-block;
+        vertical-align: middle;
+        img {
+            max-height: rem(64px);
+        }
+    }
 }
 h2 {
     font-size: rem(24px);

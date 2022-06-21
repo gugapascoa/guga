@@ -1,42 +1,46 @@
-<section class="journey">
+<section id="journey">
     <div class="journey-title">
         <h2>My journey <span>so far</span></h2>
     </div>
-    <div class="professional-experience">
+    <div class="journey-category professional-experience">
         <h3>Professional experience</h3>
-        {% for job in site.data.professional-exp %}
-        <div class="journey-text journey-text-{{ forloop.index }}">
-            <h4>{{job.title}}</h4>
-            <h5>{{job.company}} - {{job.duration}}</h5>
-            <ul>
-                {% for text in job.texts %}
-                <li>{{text}}</li>
-                {% endfor %}
-            </ul>
-            <div>
-                <h6>Technologies:</h6>
-                <ul>
-                    {% for technology in job.technologies %}
-                    <li>
-                        <figure>
-                            <img src="{{ "{{site.baseurl}}/assets/images/icons/technologies/{{technology | downcase | replace: " ", "-"}}.png" | relative_url }}" alt="{{technology}} icon">
-                        </figure>
-                        {{technology}}
-                    </li>
+        <div class="journey-text-wrapper">
+            {% for job in site.data.professional-exp %}
+            <div class="journey-text journey-text-{{ forloop.index }}">
+                <h4>{{job.title}}</h4>
+                <h5>{{job.company}} - {{job.duration}}</h5>
+                <ul class="texts-list">
+                    {% for text in job.texts %}
+                    <li>{{text}}</li>
                     {% endfor %}
                 </ul>
+                <div class="technologies">
+                    <h6>Technologies:</h6>
+                    <ul class="technologies-list">
+                        {% for technology in job.technologies %}
+                        <li class="technology-icon">
+                            <figure>
+                                <img src="{{ "{{site.baseurl}}/assets/images/icons/technologies/{{technology | downcase | replace: " ", "-"}}.png" | relative_url }}" alt="{{technology}} icon">
+                            </figure>
+                            {{technology}}
+                        </li>
+                        {% endfor %}
+                    </ul>
+                </div>
             </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
-    <div class="education">
+    <div class="journey-category education">
         <h3>Education</h3>
-        {% for course in site.data.education %}
-        <div class="journey-text journey-text-{{ forloop.index }}">
-            <h4>{{course.title}}</h4>
-            <h5>{{course.institution}} · {{course.duration}}</h5>
+        <div class="journey-text-wrapper">
+            {% for course in site.data.education %}
+            <div class="journey-text journey-text-{{ forloop.index }}">
+                <h4>{{course.title}}</h4>
+                <h5>{{course.institution}} · {{course.duration}}</h5>
+            </div>
+            {% endfor %}
         </div>
-        {% endfor %}
     </div>
 
 </section>

@@ -9,6 +9,11 @@
         flex-direction: row;
         gap: rem(96px);
     }
+    @media (min-width: $screen-lg) {
+        padding: $margin-desktop;
+        padding-top: rem(96px);
+        padding-bottom: rem(96px);
+    }
     .services-text {
         display: flex;
         flex-direction: column;

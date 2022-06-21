@@ -1,0 +1,90 @@
+#journey {
+    padding: rem(96px) rem(16px);
+    display: flex;
+    flex-direction: column;
+    gap: rem(48px);
+    @media (min-width: $screen-md) {
+        padding: $margin-desktop;
+        padding-top: rem(96px);
+        padding-bottom: rem(96px);
+    }
+    h2 {
+        font-size: rem(32px);
+    }
+    span {
+        color: $blue;
+    }
+    .journey-category {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        margin-bottom: rem(64px);
+        @media (min-width: $screen-sm) {
+            display: grid;
+            grid-template-columns: 1fr 3fr;
+        }
+        h3 {
+            font-size: rem(24px);
+            font-weight: 600;
+        }
+    }
+    .journey-text {
+        position: relative;
+        padding: 0 rem(16px) rem(64px);
+        border-left: 2px solid transparent;
+        color: $dark-grey;
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 1ch;
+            width: 2px;
+            height: calc(100% + 2ch);
+            background: $blue;
+        }
+        &:last-child {
+            &::before {
+                background: repeating-linear-gradient(to bottom, $blue 0,
+                $blue 10px, $light-grey 8px,
+                $light-grey 20px);
+            }
+        }
+        h4 {
+            color: $blue;
+            font-weight: 600;
+            &::before {
+                content: '';
+                position: absolute;
+                left: -0.4ch;
+                top: .5ch;
+                width: 1ch;
+                height: 1ch;
+                background-color: $blue;
+                border-radius: 100%;
+            }
+        }
+        h5 {
+            font-weight: 400;
+        }
+        .texts-list {
+            padding-left: rem(16px);
+            li {
+                list-style: disc;
+            }
+        }
+    }
+    .technologies {
+        display: flex;
+        flex-direction: column;
+        gap: rem(16px);
+        .technologies-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: rem(16px);
+        }
+    }
+    
+}

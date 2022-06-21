@@ -1,0 +1,11 @@
+.technology-icon {
+    display: flex;
+    gap: rem(16px);
+    padding: rem(12px) rem(20px);
+    background-color: $white;
+    width: fit-content;
+    border-radius: rem(24px);
+    figure {
+        max-width: rem(24px);
+    }
+}

@@ -7,7 +7,7 @@ layout: default
         <figcaption>
             <p>Case study</p>
             <h1>{{page.h1}}</h1>
-            <a href="#" target="_self">
+            <a href="#{{page.class}}" target="_self">
                 <button class="secondary-button icon-button secondary-button-white" type="button" name="scroll">Keep scrolling
                     <figure>
                         <img src="{{ "{{site.baseurl}}/assets/images/icons/arrow-down-white.svg" | relative_url }}">
@@ -16,5 +16,17 @@ layout: default
             </a>
         </figcaption>
     </figure>
-
 </section>
+{% if page.class == "proxify" %}
+    {% include case-studies/proxify.html %}
+{% endif %}
+{% if page.class == "almanaque" %}
+    {% include case-studies/almanaque.html %}
+{% endif %}
+{% if page.class == "faber" %}
+    {% include case-studies/faber.html %}
+{% endif %}
+{% if page.class == "major" %}
+    {% include case-studies/major.html %}
+{% endif %}
+{% include modules/get-in-touch-cta.html %}

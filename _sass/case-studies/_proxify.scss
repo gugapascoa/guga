@@ -230,3 +230,9 @@
         }
     }
 }
+.final div {
+    @media(min-width: $screen-lg) {
+        flex-direction: row;
+        gap: rem(32px);
+    }
+}
